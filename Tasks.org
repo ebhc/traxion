@@ -1,0 +1,23 @@
+* Tasks (See explanation under the Git:AddTasksOrgFile entry)
+** DONE [#A] Git:AddTasksOrgFile                                                                          :Life:Traxion:
+   SCHEDULED: <2016-12-16 Fri> DEADLINE: <2016-12-16 Fri>
+   CLOCK: [2016-12-16 Fri 22:09]--[2016-12-16 Fri 22:35] =>  0:26
+   :PROPERTIES:
+   :Effort:   0:30
+   :END:
+   This Emacs Org-Mode file represents the backlog for this project.
+   It uses Org-Mode's features for representing the backlog as a list
+   of tasks with various types of associated metadata.  The types of
+   metadata to be used are: completion status (TODO, BUSY, DONE),
+   priority ([#A]...[#G]), tags for grouping, scheduled and deadline
+   dates, amount of time spent (as Org-mode CLOCK entries) and an
+   effort estimate (the Effort property).  This setup allows Traxion
+   to use Org-Mode's entry scanning facilities to gather this data
+   (perhaps as part of a larger collection) and represent it in habit
+   and goal monitoring visualizations.
+** TODO [#B] Git:AddTestHarness                                                                           :Life:Traxion:
+   SCHEDULED: <2016-12-16 Fri>
+** TODO [#C] Git:CreateDao                                                                                :Life:Traxion:
+   SCHEDULED: <2016-12-16 Fri>
+** TODO [#D] Git:SetupAsMelpaProject                                                                      :Life:Traxion:
+   SCHEDULED: <2016-12-16 Fri>
