@@ -15,8 +15,30 @@
    to use Org-Mode's entry scanning facilities to gather this data
    (perhaps as part of a larger collection) and represent it in habit
    and goal monitoring visualizations.
-** TODO [#B] Git:AddTestHarness                                                                           :Life:Traxion:
+** DONE [#B] Git:AddTestHarness                                                                           :Life:Traxion:
    SCHEDULED: <2016-12-16 Fri>
+   CLOCK: [2016-12-17 Sat 21:12]--[2016-12-17 Sat 21:59] =>  0:47
+   The problem here is to use ERT (the Emacs Regression Testing tool)
+   in such a way that some flexibility is provided for running a
+   specified subcollection of the full test suite in a separate Emacs
+   process (so that all and only all the latest definitions of all
+   traxion functions are always used in the test suite.
+
+   A nice solution is to create a simple bash file (ert.sh) which sets
+   the environment variable TESTFILES to its entire list of
+   command-line arguments, which need to be a list of only
+   traxion-*-test.el files.  This script then simply runs
+   traxion-ert.el in a new Emacs instance, which in turn extracts and
+   requires all the provided symbols of test files in the list it
+   obtains from the TESTFILES environment variable, and runs them all
+   as a combined ERT test suite.
+*** Example command-lines
+    bash ert.sh
+    bash ert.sh traxion-ert1-test.el
+    bash ert.sh traxion-ert2-test.el
+    bash ert.sh traxion-ert1-test.el traxion-ert2-test.el
+    bash ert.sh traxion-ert2-test.el traxion-ert2-test.el
+    bash ert.sh traxion-*-test.el
 ** TODO [#C] Git:CreateDao                                                                                :Life:Traxion:
    SCHEDULED: <2016-12-16 Fri>
 ** TODO [#D] Git:SetupAsMelpaProject                                                                      :Life:Traxion:

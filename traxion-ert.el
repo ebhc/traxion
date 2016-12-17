@@ -1,0 +1,6 @@
+(add-to-list (quote load-path) ".")
+(mapcar (lambda (TESTFILE) (require (intern (car (split-string TESTFILE "[.]")))))
+        (split-string (getenv "TESTFILES")))
+(ert t)
+(delete-other-windows)
+(provide 'traxion-ert)
