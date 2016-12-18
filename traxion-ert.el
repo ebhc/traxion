@@ -2,5 +2,6 @@
 (mapcar (lambda (TESTFILE) (require (intern (car (split-string TESTFILE "[.]")))))
         (split-string (getenv "TESTFILES")))
 (ert t)
+(message (getenv "TESTFILES"))
 (delete-other-windows)
 (provide 'traxion-ert)

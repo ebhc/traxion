@@ -38,8 +38,34 @@
     bash ert.sh traxion-ert2-test.el
     bash ert.sh traxion-ert1-test.el traxion-ert2-test.el
     bash ert.sh traxion-ert2-test.el traxion-ert2-test.el
+    bash ert.sh traxion-ert*-test.el
+    bash ert.sh traxion-dao*-test.el
+    bash ert.sh traxion-entity*-test.el
     bash ert.sh traxion-*-test.el
-** TODO [#C] Git:CreateDao                                                                                :Life:Traxion:
+** BUSY [#A] Git:CreateDao                                                                                :Life:Traxion:
    SCHEDULED: <2016-12-16 Fri>
+   CLOCK: [2016-12-18 Sun 21:31]--[2016-12-18 Sun 23:19] =>  1:48
+   CLOCK: [2016-12-18 Sun 21:06]--[2016-12-18 Sun 21:24] =>  0:18
+   CLOCK: [2016-12-18 Sun 17:55]--[2016-12-18 Sun 20:05] =>  2:10
+   CLOCK: [2016-12-18 Sun 11:54]--[2016-12-18 Sun 13:27] =>  1:33
+   CLOCK: [2016-12-17 Sat 22:44]--[2016-12-17 Sat 22:58] =>  0:14
+   There are to be two implementations of our Data Access Object for
+   habit data, one backed by a simple file containing an appropriate
+   org-mode table, and the other backed by a sqlite database
+   accessible through emacsql.  The idea in practice is that these two
+   representations will be sychronised with each other, because in
+   some situations it is more convenient to read and write a flat file
+   in a terse coded format, and at other times it is more convenient
+   (typically for programs) to read from and write to a sqlite
+   database.
+
+   It might make sense to use EIEIO, so that we can have an object
+   oriented program structure with a common interface that has two
+   underlying implementations, instances of both of which we may
+   sometimes want to use simultaneously.  A flat structure consisting
+   of a collection of related functions doesn't provide that sort of
+   flexibility.  We need to be able to create instances of different
+   subclasses of a common superclass.  So the question is, (how) does
+   EIEIO support this?
 ** TODO [#D] Git:SetupAsMelpaProject                                                                      :Life:Traxion:
    SCHEDULED: <2016-12-16 Fri>
